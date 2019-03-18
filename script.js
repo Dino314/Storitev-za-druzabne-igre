@@ -45,25 +45,46 @@ $(document).ready(function(){
 	$("#searchButton").click(function(){
 		var query = $("#gameSearch").val().replace(/ /g, "+");
 		var id = "";
-		//console.log(query);
+		var type = "&type=";
+		//console.log($('#inlineCheckbox1').is(":checked"))
+		if($('#inlineCheckbox1').is(":checked")){
+			type += "boardgame,";
+		}
+		if($('#inlineCheckbox2').is(":checked")){
+			type += "boardgameexpansion,";
+		}
+		if($('#inlineCheckbox3').is(":checked")){
+			type += "boardgameaccessory,";
+		}
+		console.log(type);
 		$("#test").text("");
 		$("tbody").text("");
-		if(query.length < 4){
+		if(type.length==6){
+			$("#test").text("Niste označili kaj bi iskali");
+			return;
+		}
+		else if(query.length < 4){
 			$("#test").text("Prekratko");
 		}
 		else{
 			$("#test").text("Iskanje...");
 			$.ajax({
-				url:'https://api.geekdo.com/xmlapi2/search?query='+query,
+				url:'https://api.geekdo.com/xmlapi2/search?query='+query+type,
 				dataType:'xml',
 				async:false,
 				success:function(data){
 					//console.log(data);
 					$("#test").text("");
 					$("tbody").text("");
+					
+					if($(data).find("items").attr("total")==0){
+						$("#test").text("Ni rezultatov");
+						return;
+					}
+					
 					$(data).find("items item").each(function(){
 						id = id+","+$(this).attr("id");
-						console.log(id.slice(1));
+						//console.log(id.slice(1));
 					});
 				},
 				error: function(){
@@ -72,7 +93,7 @@ $(document).ready(function(){
 			});
 			
 			$.ajax({
-				url:'https://api.geekdo.com/xmlapi2/thing?id='+id.slice(1)+'&type=boardgame,boardgameexpansion,boardgameaccessory',
+				url:'https://api.geekdo.com/xmlapi2/thing?id='+id.slice(1)+type,//+'&type=boardgame,boardgameexpansion,boardgameaccessory',
 				dataType:'xml',
 				async:false,
 				success:function(data){
@@ -103,7 +124,7 @@ $(document).ready(function(){
 						
 						$("tbody").append(
 							$("<td />", {
-								text: categories
+								html: categories
 							})
 						);
 												
