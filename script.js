@@ -45,6 +45,10 @@ $(document).ready(function(){
 	$("#searchButton").click(function(){
 		var query = $("#gameSearch").val().replace(/ /g, "+");
 		var id = "";
+		
+		//CHANGE IDS TO ONLY ARRAY, THEN MAKE FUNCTION TO CONCATINATE WITH ,
+		
+		//var idArr = [];
 		var type = "&type=";
 		//console.log($('#inlineCheckbox1').is(":checked"))
 		if($('#inlineCheckbox1').is(":checked")){
@@ -56,7 +60,7 @@ $(document).ready(function(){
 		if($('#inlineCheckbox3').is(":checked")){
 			type += "boardgameaccessory,";
 		}
-		console.log(type);
+		//console.log(type);
 		$("#test").text("");
 		$("tbody").text("");
 		if(type.length==6){
@@ -84,7 +88,8 @@ $(document).ready(function(){
 					
 					$(data).find("items item").each(function(){
 						id = id+","+$(this).attr("id");
-						//console.log(id.slice(1));
+						//idArr[i] = $(this).attr("id");
+						//console.log(idArr);
 					});
 				},
 				error: function(){
@@ -100,6 +105,8 @@ $(document).ready(function(){
 					
 					$(data).find("items item").each(function(){
 						var name = $(this).find("name").attr("value");
+						var id = $(this).attr("id");
+						var name = "<a href='https://boardgamegeek.com/boardgame/"+id+"' target='_blank'>"+name+"</a>";
 						var thumbnail = $(this).find("thumbnail").text();
 						var yearpublished = $(this).find("yearpublished").attr("value");
 						var minplayers = $(this).find("minplayers").attr("value");
@@ -118,7 +125,7 @@ $(document).ready(function(){
 						
 						$("tbody").append(
 							$("<td />", {
-								text: name
+								html: name
 							})
 						);
 						
@@ -158,7 +165,7 @@ $(document).ready(function(){
 		
 	});
 
-
+	//DEPRECATED
 	$("#searchButton2").click(function(){
 		var id = $("#gameSearch").val();
 		
@@ -166,7 +173,7 @@ $(document).ready(function(){
 			url:'https://api.geekdo.com/xmlapi2/thing?id='+id+'&type=boardgame,boardgameexpansion,boardgameaccessory',
 			dataType:'xml',
 			success:function(data){
-				console.log(data);
+				//console.log(data);
 				
 				var imag = $(data).find("image").text();
 				$("#imag").attr("src", imag);
