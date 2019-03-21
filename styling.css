@@ -1,0 +1,36 @@
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th
+	{
+	background-color: #f45959;
+}
+
+.table-hover>tbody>tr:hover>td, li:hover {
+	background-color: #f23131;
+}
+
+body {
+	background-color: white;
+}
+
+a {
+	color: black;
+}
+
+a:hover{
+	    text-decoration: none;
+}
+
+.btn {
+	background-color: #f45959;
+}
+
+.navbar, .dropdown-menu{
+	background-color: #f45959;
+}
+
+.dropdown-menu>a:hover{
+	background-color: #f23131;
+}
+
+#main{
+	margin-top:80px;
+}

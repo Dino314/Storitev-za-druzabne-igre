@@ -106,7 +106,7 @@ $(document).ready(function(){
 					$(data).find("items item").each(function(){
 						var id = $(this).attr("id");
 						//var name = "<a href='https://boardgamegeek.com/boardgame/"+id+"' target='_blank'>"+$(this).find("name").attr("value")+"</a>";
-						var name = "<a href='igra.html?igra="+id+"'>"+$(this).find("name").attr("value")+"</a>";
+						var name = "<a class='nav-link' href='igra.html?igra="+id+"'>"+$(this).find("name").attr("value")+"</a>";
 						var thumbnail = "<img width=\"50%\" src='"+$(this).find("thumbnail").text()+"'></img>";
 						var yearpublished = $(this).find("yearpublished").attr("value");
 						
@@ -151,7 +151,7 @@ $(document).ready(function(){
 																	"</td><td class=\"d-none d-sm-table-cell\">"+yearpublished+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+players+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+playtime+
-																	"</td><td class=\"d-none d-sm-table-cell\">&#9734;&#9829;</td></tr>");
+																	"</td><td class=\"d-none d-sm-table-cell\"><h1><a href='#'>&#9734;</a><a href='#'>&#9829;</a></h1></td></tr>");
 					});
 
 				},
