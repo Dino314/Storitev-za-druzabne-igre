@@ -14,7 +14,11 @@
 
 <title>Igrajmo</title>
 </head>
+
+
+
 <body class="text-center">
+
 	<div class="container-fluid border-bottom fixed-top bg-light">
 		<div class="row pb-1 pt-1">
 			<div class="col border-right">
@@ -34,32 +38,25 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="container-fluid pt-5">
-
 		<div class="row">
-			<div class="col">
-				<h2>Dobrodošli</h2>
-
-				<button type="button" class="btn btn-outline-primary"
-					id="iskanjeIger">Iskanje družabnih iger</button>
-					<br /><br />
+			<div class="col-12 col-sm-5 col-md-5 col-lg-4 col-xl-3">
+				<img id="thumbnail" class="img-fluid" src=""></img>
 			</div>
-			
-			<div class="col-12 col-sm-7 col-md-6 col-lg-5">
-				<h3>Vroče igre</h3>
-				<table class="table table-striped table-hover" id="vroceIgre">
-					<thead>
-						<tr>
-							<th scope="col">Rank</th>
-							<th scope="col">Ime igre</th>
-						</tr>
-					</thead>
+			<div class="col border">
+				<table id="igra" class="table table-hover text-left">
 					<tbody>
 
 					</tbody>
 				</table>
 			</div>
-			
+		</div>
+		<div class="row text-left">
+			<div class="col border">
+				<strong>Opis:</strong>
+				<p id="description"></p>
+			</div>
 		</div>
 	</div>
 
@@ -75,8 +72,10 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
+	<script
+		src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
 	<script src="script.js"></script>
-	<script src="vroceIgre.js"></script>
+	<script src="igra.js"></script>
 
 </body>
 </html>

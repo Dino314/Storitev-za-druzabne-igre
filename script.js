@@ -98,62 +98,60 @@ $(document).ready(function(){
 			});
 			
 			$.ajax({
-				url:'https://api.geekdo.com/xmlapi2/thing?id='+id.slice(1)+type,//+'&type=boardgame,boardgameexpansion,boardgameaccessory',
+				url:'https://api.geekdo.com/xmlapi2/thing?id='+id.slice(1)+type,
 				dataType:'xml',
 				async:false,
 				success:function(data){
 					
 					$(data).find("items item").each(function(){
-						var name = $(this).find("name").attr("value");
 						var id = $(this).attr("id");
-						var name = "<a href='https://boardgamegeek.com/boardgame/"+id+"' target='_blank'>"+name+"</a>";
-						var thumbnail = $(this).find("thumbnail").text();
+						//var name = "<a href='https://boardgamegeek.com/boardgame/"+id+"' target='_blank'>"+$(this).find("name").attr("value")+"</a>";
+						var name = "<a href='igra.html?igra="+id+"'>"+$(this).find("name").attr("value")+"</a>";
+						var thumbnail = "<img width=\"50%\" src='"+$(this).find("thumbnail").text()+"'></img>";
 						var yearpublished = $(this).find("yearpublished").attr("value");
+						
 						var minplayers = $(this).find("minplayers").attr("value");
 						var maxplayers = $(this).find("maxplayers").attr("value");
+						
+						var players = checkMinMax(minplayers, maxplayers);
+						
 						var minplaytime = $(this).find("minplaytime").attr("value");
+/*
+						if(minplaytime % 60 == 0){
+							minplaytime = minplaytime / 60;
+							UroUriUre(minplaytime);
+						}else if(minplaytime >= 60){
+							minplaytime = parseInt(minplaytime / 60) +"ur"+minplaytime % 60 +"minut";
+						}else{
+							minplaytime+=" minut";
+						}*/
+						
 						var maxplaytime = $(this).find("maxplaytime").attr("value");
+						/*
+						if(maxplaytime % 60 == 0){
+							maxplaytime = maxplaytime / 60;
+							UroUriUre(maxplaytime);
+						}else if(maxplaytime >= 60){
+							maxplaytime = parseInt(maxplaytime / 60) +"ur"+maxplaytime % 60 +"minut";
+						}else{
+							maxplaytime+=" minut";
+						}
+						*/
+						var playtime = checkMinMax(minplaytime, maxplaytime);
+						
 						var categories = "";
 						$(this).find("link[type='boardgamecategory']").each(function(){
 										categories = categories+$(this).attr("value")+"<br />";
 									});
 						
 						
-						$("tbody").append("<tr>");
-						
-						$("tbody").append("<td><img src='"+thumbnail+"'></img></td>");
-						
-						$("tbody").append(
-							$("<td />", {
-								html: name
-							})
-						);
-						
-						$("tbody").append(
-							$("<td />", {
-								html: categories
-							})
-						);
-												
-						$("tbody").append(
-							$("<td />", {
-								text: yearpublished
-							})
-						);
-						
-						$("tbody").append(
-							$("<td />", {
-								text: minplayers+" - "+maxplayers
-							})
-						);
-						
-						$("tbody").append(
-							$("<td />", {
-								text: minplaytime+" min - "+maxplaytime+" min"
-							})
-						);
-						
-						$("tbody").append("</tr>");
+						$('#tableSearch > tbody:last-child').append("<tr><td>"+thumbnail+
+																	"</td><td>"+name+
+																	"</td><td class=\"d-none d-sm-table-cell\">"+categories+
+																	"</td><td class=\"d-none d-sm-table-cell\">"+yearpublished+
+																	"</td><td class=\"d-none d-sm-table-cell\">"+players+
+																	"</td><td class=\"d-none d-sm-table-cell\">"+playtime+
+																	"</td><td class=\"d-none d-sm-table-cell\">&#9734;&#9829;</td></tr>");
 					});
 
 				},
@@ -164,34 +162,29 @@ $(document).ready(function(){
 		}
 		
 	});
-
-	//DEPRECATED
-	$("#searchButton2").click(function(){
-		var id = $("#gameSearch").val();
-		
-		$.ajax({
-			url:'https://api.geekdo.com/xmlapi2/thing?id='+id+'&type=boardgame,boardgameexpansion,boardgameaccessory',
-			dataType:'xml',
-			success:function(data){
-				//console.log(data);
-				
-				var imag = $(data).find("image").text();
-				$("#imag").attr("src", imag);
-
-				var test = $(data).find("name").attr("value");
-				$("#test").text(test);
-				
-				$("#test").append("<br />asd");
-
-			},
-			error: function(){
-				$("#test").text("Failed");
-			}
-		});
-
-	});
+	/*
+	function UroUriUre(time){
+		if(time == 1){
+			console.log("asd"+time);
+			time+=" uro";
+		}else if(time == 2){
+			time+=" uri";
+		}else{
+			time+=" ure";
+		}
+	}*/
 	
-	$("#iskanjeIger").click(function(){
-		document.location.href = "iskanjeIger.html";
-	});
+	function checkMinMax(a, b){
+		if (a == "0" && b == "0"){
+			return "Ni informacij.";
+		}else if(a == "0"){
+			return b;
+		}else if (b == "0"){
+			return a;
+		}else if (a == b){
+			return a;
+		}else{
+			return a+" - "+b;
+		}
+	}
 });
