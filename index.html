@@ -11,28 +11,30 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="styling.css">
 
-<title>Igrajmo</title>
+<title>Igrajmo - Prijava</title>
 </head>
 <body class="text-center">
 	<div class="container pt-5">
 
-		<div class="row">
-			<div class="col-4 d-none d-sm-block"></div>
-			<div class="col">
+		<div class="row justify-content-around">
+			
+			<div class="col-12 col-sm-8 col-md-6 col-lg-5">
 				<h1>Prijava</h1>
-				Uporabniško ime: <input type="text" class="form-control"
-					id="usernameInput"> Geslo: <input type="password"
-					class="form-control" id="passwordInput"> <small
-					class="form-text"><a class="text-muted" href="#">Kliknite
+				<input type="text" class="form-control" id="usernameInput"
+					placeholder="Uporabniško ime"> <input type="password"
+					class="form-control mt-2" id="passwordInput" placeholder="Geslo">
+				<small class="form-text"><a class="text-muted" href="#">Kliknite
 						tukaj v primeru, da ste pozabili geslo</a></small>
 				<button id="logIn" type="submit"
-					class="btn btn-primary btn-block mt-1">Vpis</button>
+					class="btn btn-block mt-1">Vpis</button>
 				<small class="form-text"><a class="text-muted"
 					href="registracija.html">Še niste registrirani? Kliknite tukaj
-						za registracijo</a></small> <small class="form-text" id="infoFormLog"></small>
+						za registracijo</a></small>
+				<small class="form-text" id="error"></small>
 			</div>
-			<div class="col-4 d-none d-sm-block"></div>
+			
 		</div>
 	</div>
 

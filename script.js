@@ -7,16 +7,16 @@ $(document).ready(function(){
 		var pass = $("#passwordInput").val();
 		
 		if (login=="" && pass==""){
-			$("#infoFormLog").text("Polji sta prazni");
+			$("#error").text("Polji sta prazni");
 		}
 		else if(login==""){
-			$("#infoFormLog").text("Uporabniško ime je prazno");
+			$("#error").text("Uporabniško ime je prazno");
 		}
 		else if(pass==""){
-			$("#infoFormLog").text("Geslo je prazno");
+			$("#error").text("Geslo je prazno");
 		}
 		else{
-			$("#infoFormLog").text("Vpisovanje...");
+			$("#error").text("Vpisovanje...");
 			var data={
 				login_ime:login,
 				login_geslo:pass
@@ -33,14 +33,48 @@ $(document).ready(function(){
 					document.location.href = "dobrodosli.html";
 				}
 				else if(response=="loginError"){
-					$("#infoFormLog").text("Wrong username or password");
+					$("#error").text("Wrong username or password");
 				}
 				else{
-					$("#infoFormLog").text("Error in connecting to database: ("+response+"), ("+status+")");
+					$("#error").text("Error in connecting to database: ("+response+"), ("+status+")");
 				}
 			});
 		}
 	});
+	
+$("#register").click(function(){
+	
+	var login = $("#usernameInput").val();
+	var pass = $("#passwordInput").val();
+	var eposta = $("#emailInput").val();
+
+	if (login=="" || pass=="" || eposta==""){
+		$("#error").text("Nekatera polja so prazna");
+	}
+	else{
+
+		var data={
+			uporabnisko_ime:login,
+			geslo:pass,
+			email:eposta
+		};
+		
+		//sending data via POST method to a php script, returns a response
+		$.post("register.php", data, function(response, status){
+
+			if(response=="registerSuccess"){
+				
+				$("#error").text("Registration Successful, you may log in now");
+			}
+			else if(response=="registerError"){
+				$("#error").text("Registraion failed, username already exists");
+			}
+			else{
+				$("#error").text("Error in connecting to database: ("+response+"), ("+status+")");
+			}
+		});
+	}
+});
 	
 	$("#searchButton").click(function(){
 		var query = $("#gameSearch").val().replace(/ /g, "+");
@@ -103,7 +137,7 @@ $(document).ready(function(){
 				async:false,
 				success:function(data){
 					
-					$(data).find("items item").each(function(){
+					$(data).find("items item").each(function(i){
 						var id = $(this).attr("id");
 						//var name = "<a href='https://boardgamegeek.com/boardgame/"+id+"' target='_blank'>"+$(this).find("name").attr("value")+"</a>";
 						var name = "<a class='nav-link' href='igra.html?igra="+id+"'>"+$(this).find("name").attr("value")+"</a>";
@@ -151,8 +185,12 @@ $(document).ready(function(){
 																	"</td><td class=\"d-none d-sm-table-cell\">"+yearpublished+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+players+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+playtime+
-																	"</td><td class=\"d-none d-sm-table-cell\"><h1><a href='#'>&#9734;</a><a href='#'>&#9829;</a></h1></td></tr>");
+																	"</td><td class=\"d-none d-sm-table-cell\"><h1><a href='#'>O</a> <a href='#'>L</a> <a href='#'>W</a></h1></td></tr>");
 					});
+					
+					if(i>48){
+						return false;
+					}
 
 				},
 				error: function(){
@@ -173,6 +211,14 @@ $(document).ready(function(){
 			time+=" ure";
 		}
 	}*/
+	
+	$(window).scroll(function() {
+		if ($(this).scrollTop() == 0) {
+			$('.fixed-bottom').hide();
+		} else {
+			$('.fixed-bottom').show();
+		}
+	});
 	
 	function checkMinMax(a, b){
 		if (a == "0" && b == "0"){

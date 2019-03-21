@@ -1,10 +1,15 @@
-.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th
-	{
-	background-color: #f45959;
+.light-color, 
+	.table-hover>tbody>tr:hover>td, li:hover, .dropdown-menu>a:hover {
+	background-color: #a9fbc3;
 }
 
-.table-hover>tbody>tr:hover>td, li:hover {
-	background-color: #f23131;
+.middle-color, .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th
+	{
+	background-color: #acfcd9;
+}
+
+.dark-color, .navbar, .dropdown-menu, .fixed-bottom, #head, .btn, tr.sticky-top {
+	background-color: #55d6be;
 }
 
 body {
@@ -15,22 +20,50 @@ a {
 	color: black;
 }
 
-a:hover{
-	    text-decoration: none;
+a:hover {
+	text-decoration: none;
 }
 
-.btn {
-	background-color: #f45959;
+.btn-width{
+	width: 100px;
 }
 
-.navbar, .dropdown-menu{
-	background-color: #f45959;
+#mainGame {
+	margin-top: 56px;
 }
 
-.dropdown-menu>a:hover{
-	background-color: #f23131;
+#main {
+	margin-top: 80px;
 }
 
-#main{
-	margin-top:80px;
+thead.sticky-top {
+	top: 56px;
+}
+
+.fixed-bottom{
+	display:none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table td, table th {
+	border: 1px solid #868e96;
+}
+
+table tr:first-child th {
+	border-top: 0;
+}
+
+table tr:last-child td {
+	border-bottom: 0;
+}
+
+table tr td:first-child, table tr th:first-child {
+	border-left: 0;
+}
+
+table tr td:last-child, table tr th:last-child {
+	border-right: 0;
 }

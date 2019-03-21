@@ -9,13 +9,13 @@ $(document).ready(function(){
 					var id = $(this).attr("id");
 					var name = $(this).find("name").attr("value");
 					//var name = "<a href='https://boardgamegeek.com/boardgame/"+id+"' target='_blank'>"+name+"</a>";
-					var name = "<a class='nav-link' href='igra.html?igra="+id+"'>"+name+"</a>";
+					var name = "<a href='igra.html?igra="+id+"'>"+name+"</a>";
 
 					$('#vroceIgre > tbody:last-child').append("<tr><td>"+(i+1)+"</td><td>"+name+"</td></tr>");
 					
-					if(i>8){
+					/*if(i>8){
 						return false;
-					}
+					}*/
 				});
 				$("table").addClass("table-striped");
 			},

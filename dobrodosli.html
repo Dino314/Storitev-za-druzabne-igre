@@ -13,23 +13,23 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="styling.css">
 
-<title>Igrajmo</title>
+<title>Igrajmo - Prva stran</title>
 </head>
 <body class="text-center">
 
-	<nav class="navbar navbar-expand-sm navbar-light">
+	<nav class="navbar navbar-expand-sm navbar-light fixed-top">
 		<ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Domov</a>
-             </li>
-             </ul>
+			<li class="nav-item">
+            	<a class="nav-link active" href="dobrodosli.html">Domov</a>
+            </li>
+        </ul>
             
         <a class="navbar-toggler navbar-right" data-toggle="collapse" data-target="#navbarTogglerDemo03" href="#"><span class="navbar-toggler-icon"></span></a>
 
         <div class="collapse navbar-collapse text-right" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Iskanje</a>
+              <a class="nav-link" href="iskanjeIger.html">Iskanje</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Zemljevid</a>
@@ -37,7 +37,10 @@
           </ul>
           <ul class="navbar-nav">
 	          <li class="nav-item">
-	            <a class="nav-link" href="#">Seznam iger</a>
+	            <a class="nav-link" href="#">Seznam mojih iger</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="#">Seznam priljubljenih</a>
 	          </li>
 	          <li class="nav-item">
 	            <a class="nav-link" href="#">Seznam želja</a>
@@ -51,11 +54,36 @@
           </ul>
         </div>
       </nav>
-	
+
 	<div class="container-fluid" id="main">
 
-		<div class="row">
-			<div class="col">
+		<div class="row pb-2">
+
+			<div class="d-none d-sm-block col-md-5 col-lg-4 col-xl-2">
+				<div class="row justify-content-around">
+					<div class="col">
+					<h3>Vroče igre</h3>
+					
+					<small class="form-text text-muted text-left">Powered by <a
+						class="text-muted" href="https://boardgamegeek.com/">BoardGameGeek.com</a></small>
+					</div>
+				</div>
+				<div class="row">
+					<table class="table table-sm table-striped table-hover" id="vroceIgre">
+						<thead>
+							<tr class="sticky-top">
+								<th scope="col">Rank</th>
+								<th scope="col">Ime igre</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="col order-first order-md-last">
 				<h2>Dobrodošli</h2>
 
 				<button type="button" class="btn" id="iskanjeIger">Iskanje
@@ -63,21 +91,9 @@
 				<br /> <br />
 			</div>
 
-			<div class="col-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 border-bottom border-top">
-				<h3>Vroče igre</h3>
-				<table class="table table-striped table-hover" id="vroceIgre">
-					<thead>
-						<tr>
-							<th scope="col">Rank</th>
-							<th scope="col">Ime igre</th>
-						</tr>
-					</thead>
-					<tbody>
-
-					</tbody>
-				</table>
-			</div>
-
+		</div>
+		<div class="fixed-bottom">
+			<a href="#">Nazaj na vrh</a>
 		</div>
 	</div>
 

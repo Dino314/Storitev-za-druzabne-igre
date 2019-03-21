@@ -2,8 +2,8 @@
 	//required script for initial connection to the database
 	$db_name="mmglobal_druzabneIgre";
 	$mysql_user="mmglobal_dino";
-	$mysql_pass="2[aakS7^S92B";
-	$server_name="localhost:3306";
+	$mysql_pass="Test1234";
+	$server_name="localhost";
 	
 	$con = mysqli_connect($server_name, $mysql_user, $mysql_pass, $db_name);
 	if (!$con){

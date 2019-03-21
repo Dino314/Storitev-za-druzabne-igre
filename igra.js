@@ -13,6 +13,22 @@ $(document).ready(function(){
 					var name = $(data).find("name").attr("value");
 					var thumbnail = $(data).find("image").text();
 					var yearpublished = $(data).find("yearpublished").attr("value");
+					var boardgamepublisher = $(data).find("link[type='boardgamepublisher']").attr("value");
+					
+					var boardgameexpansion = "";
+					$(data).find("link[type='boardgameexpansion']").each(function(){
+									categories = categories+$(this).attr("value")+"<br />";
+								});
+					
+					var boardgamedesigner = "";
+					$(data).find("link[type='boardgamedesigner']").each(function(){
+									categories = categories+$(this).attr("value")+"<br />";
+								});
+					
+					var boardgameartist = "";
+					$(data).find("link[type='boardgameartist']").each(function(){
+									categories = categories+$(this).attr("value")+"<br />";
+								});
 					
 					var minplayers = $(data).find("minplayers").attr("value");
 					var maxplayers = $(data).find("maxplayers").attr("value");
@@ -47,14 +63,18 @@ $(document).ready(function(){
 					$(data).find("link[type='boardgamecategory']").each(function(){
 									categories = categories+$(this).attr("value")+"<br />";
 								});
+					
+					$("title").append(" - "+name);
+					
 					$("#thumbnail").attr("src", thumbnail);
 					
 					$('#igra > tbody:last-child').append(
-						"<tr><td class='text-center bg-light' colspan='2'><h3>"+name+
-						"</h3></td></tr><tr><td colspan='2'><strong>Leto izdaje:</strong> "+yearpublished+
-						"</td></tr><tr><td colspan='2'><strong>Število igralcev:</strong> "+players+
-						"</td></tr><tr><td colspan='2'><strong>Čas igranja:</strong> "+playtime+
-						"</td></tr><tr><td><strong>Kategorije:</strong></td><td>"+categories+
+						"<tr><td class='text-center'><h3>"+name+
+						"</h3></td></tr><tr><td><strong>Založnik:</strong> "+boardgamepublisher+
+						"</td></tr><tr><td><strong>Leto izdaje:</strong> "+yearpublished+
+						"</td></tr><tr><td><strong>Število igralcev:</strong> "+players+
+						"</td></tr><tr><td><strong>Čas igranja:</strong> "+playtime+
+						"</td></tr><tr><td><strong>Kategorije:</strong><br />"+categories+
 						"</td></tr>");
 					
 					
