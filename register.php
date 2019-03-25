@@ -4,6 +4,7 @@
 	$uporabnisko_ime=$_POST["uporabnisko_ime"];
 	$geslo=password_hash($_POST["geslo"], PASSWORD_DEFAULT);
 	$email=$_POST["email"];
+	$time=date("Y-m-d H:i:s");
 
 	//check if the username already exists in database
 	$sql_query="select uporabnisko_ime from Uporabniki where uporabnisko_ime like '$uporabnisko_ime';";
@@ -20,7 +21,7 @@
 	}
 	else{
 	//insert new user into database
-	$sql_query="insert into Uporabniki (uporabnisko_ime, geslo, email) values('$uporabnisko_ime', '$geslo', '$email');";
+	$sql_query="insert into Uporabniki (uporabnisko_ime, geslo, email, datum_prijave) values('$uporabnisko_ime', '$geslo', '$email', '$time');";
 	mysqli_query($con,$sql_query);
 	
 	echo "registerSuccess";

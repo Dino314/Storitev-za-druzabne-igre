@@ -13,9 +13,9 @@ $(document).ready(function(){
 
 					$('#vroceIgre > tbody:last-child').append("<tr><td>"+(i+1)+"</td><td>"+name+"</td></tr>");
 					
-					/*if(i>8){
+					if(i>8){
 						return false;
-					}*/
+					}
 				});
 				$("table").addClass("table-striped");
 			},

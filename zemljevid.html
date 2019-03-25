@@ -11,40 +11,29 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+   
 <link rel="stylesheet" href="styling.css">
 
-<title>Igrajmo</title>
+<title>Igrajmo - Prva stran</title>
 </head>
-
-
-
 <body class="text-center">
 
 	<div id="navBar"></div>
 
-	<div class="container-fluid" id="mainGame">
-	<small class="form-text text-muted text-right">Powered by <a class="text-muted" href="https://boardgamegeek.com/">BoardGameGeek.com</a></small>
-		<div class="row">
-			<div class="col-12 col-sm-5 col-md-5 col-lg-4 col-xl-3">
-				<img id="thumbnail" class="img-fluid" src=""></img>
-				<div id="root"></div>
-			</div>
-			
-			<div class="col border-left border-top">
-				<table id="igra" class="table text-left">
-					<tbody>
+	<div class="container-fluid" id="main">
 
-					</tbody>
-				</table>
+		<div class="row">
+			<div class="col-8 border p-3 text-left" id="like_button_container">
+				
+			</div>
+			<div class="col border" id="mapid" style="height:800px">
 			</div>
 		</div>
-		<div class="row text-left">
-			
-			<div class="col border-top">
-				<strong>Opis:</strong>
-				<p id="description"></p>
-			</div>
-		</div>
+
 		<div class="fixed-bottom">
 			<a href="#">Nazaj na vrh</a>
 		</div>
@@ -62,19 +51,16 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-	<script
-		src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
-		
-  <!-- Load React. -->
+	<script src="script.js"></script>
+	<script src="vroceIgre.js"></script>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-	<script src="script.js"></script>
-	<script src="igra.js"></script>
-  <script type="text/jsx" src="reactIgra.js"></script>
-
+   <script src="zemljevid.js"></script>
 </body>
 </html>

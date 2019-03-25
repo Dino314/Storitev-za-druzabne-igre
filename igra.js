@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+	$('[data-toggle="tooltip"]').tooltip();
 	var url = new URL(window.location.href);
 	var id = url.searchParams.get("igra");
 	//console.log(id);
@@ -9,52 +10,34 @@ $(document).ready(function(){
 				dataType:'xml',
 				async:false,
 				success:function(data){
-					console.log(data);
+					//console.log(data);
 					var name = $(data).find("name").attr("value");
 					var thumbnail = $(data).find("image").text();
 					var yearpublished = $(data).find("yearpublished").attr("value");
 					var boardgamepublisher = $(data).find("link[type='boardgamepublisher']").attr("value");
-					
+
 					var boardgameexpansion = "";
 					$(data).find("link[type='boardgameexpansion']").each(function(){
-									categories = categories+$(this).attr("value")+"<br />";
-								});
-					
+						boardgameexpansion = boardgameexpansion+$(this).attr("value")+"<br />";
+					});
+
 					var boardgamedesigner = "";
 					$(data).find("link[type='boardgamedesigner']").each(function(){
-									categories = categories+$(this).attr("value")+"<br />";
-								});
-					
+						boardgamedesigner = boardgamedesigner+$(this).attr("value")+"<br />";
+					});
+
 					var boardgameartist = "";
 					$(data).find("link[type='boardgameartist']").each(function(){
-									categories = categories+$(this).attr("value")+"<br />";
-								});
+						boardgameartist = boardgameartist+$(this).attr("value")+"<br />";
+					});
 					
 					var minplayers = $(data).find("minplayers").attr("value");
 					var maxplayers = $(data).find("maxplayers").attr("value");
-					var players = minplayers+" - "+maxplayers;
-					if (minplayers == "0" && maxplayers == "0"){
-						players = "Ni informacij.";
-					}else if(minplayers == "0"){
-						players = maxplayers;
-					}else if (maxplayers == "0"){
-						players = minplayers;
-					}else if (minplayers == maxplayers){
-						players = minplayers;
-					}
+					var players = checkMinMax(minplayers, maxplayers);
 					
 					var minplaytime = $(data).find("minplaytime").attr("value");
 					var maxplaytime = $(data).find("maxplaytime").attr("value");
-					var playtime = minplaytime+" minut - "+maxplaytime+" minut";
-					if(minplaytime == "0" && maxplaytime == "0"){
-						playtime = "Ni informacij.";
-					}else if(minplaytime == "0"){
-						playtime = maxplaytime;
-					}else if(maxplaytime == "0"){
-						playtime = minplaytime;
-					}else if (minplaytime == maxplaytime){
-						playtime = minplaytime+" minut";
-					}
+					var playtime = checkMinMax(minplaytime, maxplaytime);
 					
 					var description = $(data).find("description").text();
 					description = description.replace(/&#10;/g, "<br />");
@@ -67,6 +50,8 @@ $(document).ready(function(){
 					$("title").append(" - "+name);
 					
 					$("#thumbnail").attr("src", thumbnail);
+					
+					
 					
 					$('#igra > tbody:last-child').append(
 						"<tr><td class='text-center'><h3>"+name+
@@ -84,5 +69,27 @@ $(document).ready(function(){
 				}
 				
 	});
+	
+	$("p").click(function(){
+		$.get("dodajIgro.php?id="+id+"&akcija="+$(this).text(), function(data, status){
+		    //alert("Data: " + data + "\nStatus: " + status);
+		  });
+		
+	});
+	
+	//check if the player or playtime numbers are zero or equal
+	function checkMinMax(a, b){
+		if (a == "0" && b == "0"){
+			return "Ni informacij.";
+		}else if(a == "0"){
+			return b;
+		}else if (b == "0"){
+			return a;
+		}else if (a == b){
+			return a;
+		}else{
+			return a+" - "+b;
+		}
+	}
 	
 });

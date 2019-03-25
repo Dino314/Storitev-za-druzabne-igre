@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	
+	$('[data-toggle="tooltip"]').tooltip(); 
+
 	//checks first if either or both fields are empty, if not then it attempts to log the user in and either displays an error or loads the welcome page
 	$("#logIn").click(function(){
 		
@@ -185,12 +186,15 @@ $("#register").click(function(){
 																	"</td><td class=\"d-none d-sm-table-cell\">"+yearpublished+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+players+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+playtime+
-																	"</td><td class=\"d-none d-sm-table-cell\"><h1><a href='#'>O</a> <a href='#'>L</a> <a href='#'>W</a></h1></td></tr>");
+																	"</td><td id='root' class=\"d-none d-sm-table-cell\">"+"Temp"+
+																	"</td></tr>");
+					
+						if(i>48){
+							return false;
+						}
 					});
 					
-					if(i>48){
-						return false;
-					}
+					
 
 				},
 				error: function(){
@@ -212,6 +216,12 @@ $("#register").click(function(){
 		}
 	}*/
 	
+	//load navbar on a page
+	$(function(){
+		$("#navBar").load("navbar.html");
+	});
+	
+	//load a bottom div  to link to the top of the page
 	$(window).scroll(function() {
 		if ($(this).scrollTop() == 0) {
 			$('.fixed-bottom').hide();
@@ -220,6 +230,7 @@ $("#register").click(function(){
 		}
 	});
 	
+	//check if the player or playtime numbers are zero or equal
 	function checkMinMax(a, b){
 		if (a == "0" && b == "0"){
 			return "Ni informacij.";
@@ -233,4 +244,8 @@ $("#register").click(function(){
 			return a+" - "+b;
 		}
 	}
+	
+	/*function checkIfEmpty(array[]){
+		
+	}*/
 });
