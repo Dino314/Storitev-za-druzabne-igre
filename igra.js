@@ -70,12 +70,12 @@ $(document).ready(function(){
 				
 	});
 	
-	$("p").click(function(){
+	/*$("p").click(function(){
 		$.get("dodajIgro.php?id="+id+"&akcija="+$(this).text(), function(data, status){
 		    //alert("Data: " + data + "\nStatus: " + status);
 		  });
 		
-	});
+	});*/
 	
 	//check if the player or playtime numbers are zero or equal
 	function checkMinMax(a, b){

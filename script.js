@@ -1,5 +1,15 @@
 $(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip(); 
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		console.log("tab shown...");
+	});
+	
+	var hash = document.location.hash;
+	var prefix = "tab_";
+	if (hash) {
+		$('.nav-tabs a[href="'+hash.replace(prefix,"")+'"]').tab('show');
+	}
 
 	//checks first if either or both fields are empty, if not then it attempts to log the user in and either displays an error or loads the welcome page
 	$("#logIn").click(function(){
@@ -81,7 +91,6 @@ $("#register").click(function(){
 		var query = $("#gameSearch").val().replace(/ /g, "+");
 		var id = "";
 		
-		//CHANGE IDS TO ONLY ARRAY, THEN MAKE FUNCTION TO CONCATINATE WITH ,
 		
 		//var idArr = [];
 		var type = "&type=";

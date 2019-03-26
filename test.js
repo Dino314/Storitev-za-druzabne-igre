@@ -9,17 +9,14 @@ class Toggle extends React.Component {
 		togglePlay: false};
 
     // This binding is necessary to make `this` work in the callback
-    this.handleClickOwn = this.handleClickOwn.bind(this);
-	this.handleClickFav = this.handleClickFav.bind(this);
-	this.handleClickWish = this.handleClickWish.bind(this);
-	this.handleClickPlay = this.handleClickPlay.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
   
-  //
+  //get values from database for the initial state
   componentDidMount() {
     var xhr = new XMLHttpRequest();
     //var toggleOwn = false;
-    xhr.open("GET", "test2.php?id="+this.state.id, true);
+    xhr.open("GET", "initializeStates.php?id="+this.state.id, true);
     xhr.onload = function (e) {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
@@ -43,18 +40,36 @@ class Toggle extends React.Component {
     xhr.send(null);
   }
  
-	handleClickOwn() {
+	handleClick(akcija, toggle) {
 		var xhr = new XMLHttpRequest();
 	    //var toggleOwn = false;
-	    xhr.open("GET", "updateValues.php?id="+this.state.id+"&value="+this.state.toggleOwn+"&akcija=moja", true);
+	    xhr.open("GET", "updateValues.php?id="+this.state.id+"&value="+toggle+"&akcija="+akcija, true);
 	    xhr.onload = function (e) {
 	      if (xhr.readyState === 4) {
 	        if (xhr.status === 200) {
 	          var ret = (xhr.responseText);
-	          console.log("id: "+this.state.id+", value:"+this.state.toggleOwn+", PHP RESULT: "+ret);
-	          this.setState({
-	        	  toggleOwn: ret == "true" ? true : false
-	          });
+	          console.log("id: "+this.state.id+", value:"+toggle+", PHP RESULT: "+ret+", "+akcija);
+	          
+	          if(akcija == "moja"){
+		          this.setState({
+		        	  toggleOwn: ret == "true" ? true : false
+		          });
+	          }else if (akcija == "priljubljena"){
+	        	  this.setState({
+		        	  toggleFav: ret == "true" ? true : false
+		          });
+	          }else if (akcija == "zazeljena"){
+	        	  this.setState({
+		        	  toggleWish: ret == "true" ? true : false
+		          });
+	          }else if (akcija == "biIgral"){
+	        	  this.setState({
+		        	  togglePlay: ret == "true" ? true : false
+		          });
+	          
+	          }else{
+	        	  console.log("this.state Error");
+	          }
 	          
 	        } else {
 	          console.error(xhr.statusText);
@@ -65,21 +80,8 @@ class Toggle extends React.Component {
 	      console.error(xhr.statusText);
 	    };
 	    xhr.send(null);
-		
-		//this.setState({toggleOwn: !this.state.toggleOwn});
 	}
   
-	handleClickFav() {
-		this.setState({toggleFav: !this.state.toggleFav});
-	}
-	
-	handleClickWish() {
-		this.setState({toggleWish: !this.state.toggleWish});
-	}
-	
-	handleClickPlay() {
-		this.setState({togglePlay: !this.state.togglePlay});
-	}
 	
 	
 	
@@ -88,18 +90,18 @@ class Toggle extends React.Component {
   render() {
     return (
 		<div class="btn-group btn-block pb-3">
-				<button onClick={this.handleClickOwn} class="btn" data-toggle="tooltip" title="Imam igro">
+				<button onClick={() => this.handleClick("moja", this.state.toggleOwn)} class="btn" data-toggle="tooltip" title="Imam igro">
 					{this.state.toggleOwn ? 'O' : 'X'}
 				</button>
 				  
-				<button onClick={this.handleClickFav} class="btn" data-toggle="tooltip" title="Priljubljena">
+				<button onClick={() => this.handleClick("priljubljena", this.state.toggleFav)} class="btn" data-toggle="tooltip" title="Priljubljena">
 					{this.state.toggleFav ? 'O' : 'X'}
 				</button>
-				<button onClick={this.handleClickWish} class="btn" data-toggle="tooltip" title="Zaželjena">
+				<button onClick={() => this.handleClick("zazeljena", this.state.toggleWish)} class="btn" data-toggle="tooltip" title="Zaželjena">
 					{this.state.toggleWish ? 'O' : 'X'}
 				</button>
 				  
-				<button onClick={this.handleClickPlay} class="btn" data-toggle="tooltip" title="Bi igral">
+				<button onClick={() => this.handleClick("biIgral", this.state.togglePlay)} class="btn" data-toggle="tooltip" title="Bi igral">
 					{this.state.togglePlay ? 'O' : 'X'}
 				</button>
 		</div>

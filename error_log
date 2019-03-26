@@ -1,0 +1,6 @@
+[25-Mar-2019 23:04:34 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 14
+[25-Mar-2019 23:04:35 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 14
+[25-Mar-2019 23:04:36 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 14
+[25-Mar-2019 23:06:31 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 10
+[25-Mar-2019 23:06:33 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 10
+[25-Mar-2019 23:08:46 Europe/Ljubljana] PHP Fatal error:  Call to undefined function mysqli_fetch_all() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 10
