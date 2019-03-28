@@ -7,7 +7,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
 	<link rel="stylesheet" href="styling.css">
 
 	<title>Igrajmo - Seznam iger</title>
@@ -17,36 +17,103 @@
  
     <div id="navBar"></div>
 	
-	<div class="container pt-4" id="mainGame">
-		<ul class="nav nav-tabs" id="myTab" role="tablist">
+	<div class="container-fluid col-12 col-sm-10 col-md-10 col-lg-10 h-100" id="mainGame">
+		<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
 		  <li class="nav-item">
-			<a class="nav-link active" id="moje-tab" data-toggle="tab" href="#moje" role="tab" aria-controls="moje" aria-selected="true">Moje</a>
+			<a class="nav-link active" id="moje-tab" data-toggle="tab" href="#moje" role="tab" aria-controls="moje" aria-selected="true">
+				<img class="d-sm-none" src="/images/OwnB.png" width="60%"></img>
+				<div class="d-none d-sm-block"><img class="" src="/images/OwnB.png" width="10%"></img></img>Moje</div>
+			</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" id="priljubljene-tab" data-toggle="tab" href="#priljubljene" role="tab" aria-controls="priljubljene" aria-selected="false">Priljubljene</a>
+			<a class="nav-link" id="priljubljene-tab" data-toggle="tab" href="#priljubljene" role="tab" aria-controls="priljubljene" aria-selected="false">
+				<img class="d-sm-none" src="/images/FavB.png" width="60%"></img>
+				<div class="d-none d-sm-block"><img class="" src="/images/FavB.png" width="10%"></img>Priljubljene</div>
+			</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" id="zelim-tab" data-toggle="tab" href="#zelim" role="tab" aria-controls="zelim" aria-selected="false">Želim</a>
+			<a class="nav-link" id="zelim-tab" data-toggle="tab" href="#zelim" role="tab" aria-controls="zelim" aria-selected="false">
+				<img class="d-sm-none" src="/images/WishB.png" width="60%"></img>
+				<div class="d-none d-sm-block"><img class="" src="/images/WishB.png" width="10%"></img>Želim</div>
+			</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" id="biigral-tab" data-toggle="tab" href="#biigral" role="tab" aria-controls="biigral" aria-selected="false">Bi igral</a>
+			<a class="nav-link" id="biigral-tab" data-toggle="tab" href="#biigral" role="tab" aria-controls="biigral" aria-selected="false">
+				<img class="d-sm-none" src="/images/PlayB.png" width="60%"></img>
+				<div class="d-none d-sm-block"><img class="" src="/images/PlayB.png" width="10%"></img>Bi igral</div>
+			</a>
 		  </li>
 		</ul>
-		<div class="tab-content" id="myTabContent">
+		<div class="tab-content pb-4" id="myTabContent">
 			<div class="tab-pane show active border-bottom" id="moje" role="tabpanel" aria-labelledby="moje-tab">
-				<div id="mojeIgre">Nalaganje...</div>
+				<div class="d-sm-none">Moje</div>
+				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=moja" data-sort-name="name">
+				  <thead>
+				    <tr>
+				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
+				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
+				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				    </tr>
+				  </thead>
+				</table>
+				
 			</div>
 			<div class="tab-pane" id="priljubljene" role="tabpanel" aria-labelledby="priljubljene-tab">
-				dva
+				<div class="d-sm-none">Priljubljene</div>
+				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=priljubljena" data-sort-name="name">
+				  <thead>
+				    <tr>
+				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
+				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
+				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				    </tr>
+				  </thead>
+				</table>
+				
 			</div>
 			<div class="tab-pane" id="zelim" role="tabpanel" aria-labelledby="zelim-tab">
-				tri
+				<div class="d-sm-none">Želim</div>
+				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=zazeljena" data-sort-name="name">
+				  <thead>
+				    <tr>
+				      <th data-field="image" data-formatter="imageFormatter">Slika</th>
+				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
+				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				    </tr>
+				  </thead>
+				</table>
+				
 			</div>
 			<div class="tab-pane" id="biigral" role="tabpanel" aria-labelledby="biigral-tab">
-				stiri
+				<div class="d-sm-none">Bi igral</div>
+				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=biIgral" data-sort-name="name">
+				  <thead>
+				    <tr>
+				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
+				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
+				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				    </tr>
+				  </thead>
+				</table>
+				
 			</div>
 		</div>
 
+	<div class="fixed-bottom">
+			<a href="#">Nazaj na vrh</a>
+		</div>
 	</div>
 
     <!-- Optional JavaScript -->
@@ -54,6 +121,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script> -->
+    <script src="bootstrap-table.min.js"></script>
 	<!-- Load React. -->
 	<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
 	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -62,6 +132,18 @@
 	
 	<script src="script.js"></script>
 	<script src="igra.js"></script>
-	<script src="naloziIgre.js"></script>
+	<script>
+		//razbere povezavo do slike ter naredi img
+		function imageFormatter(value){
+			return "<img class=\"img-fluid\" src=\""+value+"\"></img>";
+			
+		}
+		
+		//razbere id iz vrednosti ter ustvari povezavo do igre
+		function linkFormatter(value, row){
+			return "<a href=\"igra.html?igra="+row.id+"\">"+value+"</a>";
+			
+		}
+	</script>
 	</body>
 </html>

@@ -8,9 +8,11 @@
 	background-color: #acfcd9;
 }
 
-.dark-color, .navbar, .dropdown-menu, .fixed-bottom, #head, .btn, tr.sticky-top {
-	background-color: #55d6be;
+.dark-color, .navbar, .dropdown-menu, .fixed-bottom, #head, .btn, tr.sticky-top, a.active {
+	background-color: #55d6be !important;
 }
+
+
 
 body {
 	background-color: white;
@@ -29,11 +31,11 @@ a:hover {
 }
 
 #mainGame {
-	margin-top: 56px;
+	padding-top: 80px;
 }
 
 #main {
-	margin-top: 80px;
+	padding-top: 56px;
 }
 
 thead.sticky-top {
@@ -66,4 +68,9 @@ table tr td:first-child, table tr th:first-child {
 
 table tr td:last-child, table tr th:last-child {
 	border-right: 0;
+}
+
+html, body {
+	height: 100% !important;
+}
 }

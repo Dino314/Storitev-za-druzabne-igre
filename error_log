@@ -1,6 +1,111 @@
-[25-Mar-2019 23:04:34 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 14
-[25-Mar-2019 23:04:35 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 14
-[25-Mar-2019 23:04:36 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 14
-[25-Mar-2019 23:06:31 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 10
-[25-Mar-2019 23:06:33 Europe/Ljubljana] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 10
-[25-Mar-2019 23:08:46 Europe/Ljubljana] PHP Fatal error:  Call to undefined function mysqli_fetch_all() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 10
+[26-Mar-2019 11:28:34 Europe/Ljubljana] PHP Fatal error:  Call to undefined function json_code() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 23
+[26-Mar-2019 11:34:31 Europe/Ljubljana] PHP Fatal error:  Call to undefined function json_code() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 23
+[26-Mar-2019 11:34:32 Europe/Ljubljana] PHP Fatal error:  Call to undefined function json_code() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 23
+[26-Mar-2019 11:34:34 Europe/Ljubljana] PHP Fatal error:  Call to undefined function json_code() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 23
+[26-Mar-2019 13:53:37 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::attribute() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:53:38 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::attribute() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:53:39 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::attribute() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:53:39 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::attribute() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:04 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:05 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:05 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:06 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:07 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:07 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:08 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:08 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:35 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:36 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:36 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:37 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:38 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:38 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:39 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:40 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:42 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:43 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:43 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:57:44 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:06 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:06 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:07 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:07 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:08 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:09 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:10 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:10 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:12 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:12 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:13 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 13:58:13 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:23 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:24 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:24 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:25 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:32 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:33 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:33 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:34 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:41 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:41 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:42 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:03:42 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:12 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:12 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:13 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:13 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:26 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:27 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:27 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:28 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:33 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:33 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:34 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:04:34 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on string in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:05:19 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::values() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:05:20 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::values() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:05:20 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::values() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:05:21 Europe/Ljubljana] PHP Fatal error:  Call to undefined method SimpleXMLElement::values() in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:06 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:07 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:07 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:08 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:08 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:09 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:09 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:06:10 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 28
+[26-Mar-2019 14:12:25 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:26 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:26 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:27 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:29 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:29 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:30 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:31 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:47 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:48 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:48 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:49 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:50 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:50 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:51 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:51 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:57 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:57 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:58 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:12:58 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:01 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:01 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:02 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:02 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:10 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:11 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:11 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[26-Mar-2019 14:13:12 Europe/Ljubljana] PHP Fatal error:  Call to a member function attributes() on null in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 27
+[27-Mar-2019 14:54:58 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 53002167 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40
+[27-Mar-2019 14:55:00 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 52840710 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40
+[27-Mar-2019 14:55:05 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 53002167 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40
+[27-Mar-2019 14:55:06 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 52840710 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40
+[27-Mar-2019 14:55:13 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 53002167 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40
+[27-Mar-2019 14:55:14 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 52840710 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40
+[27-Mar-2019 14:55:16 Europe/Ljubljana] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 53002167 bytes) in /home/mmglobal/druzabneigre.mmglobal.world/naloziIgre.php on line 40

@@ -94,16 +94,16 @@ class Toggle extends React.Component {
     return (
 		<div class="btn-group btn-block pb-3">
 				<button onClick={() => this.handleClick("moja", this.state.toggleOwn)} class="btn" data-toggle="tooltip" title="Imam igro">
-					<img width="80%" src={this.state.toggleOwn ? "/images/OwnB.png" : "/images/OwnW.png"} />
+					<img width="70%" src={this.state.toggleOwn ? "/images/OwnB.png" : "/images/OwnW.png"} />
 				</button>				  
 				<button onClick={() => this.handleClick("priljubljena", this.state.toggleFav)} class="btn" data-toggle="tooltip" title="Priljubljena">
-					<img width="80%" src={this.state.toggleFav ? "/images/FavB.png" : "/images/FavW.png"} />
+					<img width="70%" src={this.state.toggleFav ? "/images/FavB.png" : "/images/FavW.png"} />
 				</button>
 				<button onClick={() => this.handleClick("zazeljena", this.state.toggleWish)} class="btn" data-toggle="tooltip" title="Zaželjena">
-					<img width="80%" src={this.state.toggleWish ? "/images/WishB.png" : "/images/WishW.png"} />
+					<img width="70%" src={this.state.toggleWish ? "/images/WishB.png" : "/images/WishW.png"} />
 				</button>				  
 				<button onClick={() => this.handleClick("biIgral", this.state.togglePlay)} class="btn" data-toggle="tooltip" title="Bi igral">
-					<img width="80%" src={this.state.togglePlay ? "/images/PlayB.png" : "/images/PlayW.png"} />
+					<img width="70%" src={this.state.togglePlay ? "/images/PlayB.png" : "/images/PlayW.png"} />
 				</button>
 		</div>
     );

@@ -1,15 +1,5 @@
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
-	
-	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-		console.log("tab shown...");
-	});
-	
-	var hash = document.location.hash;
-	var prefix = "tab_";
-	if (hash) {
-		$('.nav-tabs a[href="'+hash.replace(prefix,"")+'"]').tab('show');
-	}
 
 	//checks first if either or both fields are empty, if not then it attempts to log the user in and either displays an error or loads the welcome page
 	$("#logIn").click(function(){
@@ -195,7 +185,6 @@ $("#register").click(function(){
 																	"</td><td class=\"d-none d-sm-table-cell\">"+yearpublished+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+players+
 																	"</td><td class=\"d-none d-sm-table-cell\">"+playtime+
-																	"</td><td id='root' class=\"d-none d-sm-table-cell\">"+"Temp"+
 																	"</td></tr>");
 					
 						if(i>48){
