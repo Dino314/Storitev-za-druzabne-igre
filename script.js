@@ -45,6 +45,8 @@ $(document).ready(function(){
 	
 $("#register").click(function(){
 	
+	
+	
 	var login = $("#usernameInput").val();
 	var pass = $("#passwordInput").val();
 	var eposta = $("#emailInput").val();
@@ -77,7 +79,7 @@ $("#register").click(function(){
 	}
 });
 	
-	$("#searchButton").click(function(){
+	/*$("#sssearchButton").click(function(){
 		var query = $("#gameSearch").val().replace(/ /g, "+");
 		var id = "";
 		
@@ -150,27 +152,10 @@ $("#register").click(function(){
 						var players = checkMinMax(minplayers, maxplayers);
 						
 						var minplaytime = $(this).find("minplaytime").attr("value");
-/*
-						if(minplaytime % 60 == 0){
-							minplaytime = minplaytime / 60;
-							UroUriUre(minplaytime);
-						}else if(minplaytime >= 60){
-							minplaytime = parseInt(minplaytime / 60) +"ur"+minplaytime % 60 +"minut";
-						}else{
-							minplaytime+=" minut";
-						}*/
+
 						
 						var maxplaytime = $(this).find("maxplaytime").attr("value");
-						/*
-						if(maxplaytime % 60 == 0){
-							maxplaytime = maxplaytime / 60;
-							UroUriUre(maxplaytime);
-						}else if(maxplaytime >= 60){
-							maxplaytime = parseInt(maxplaytime / 60) +"ur"+maxplaytime % 60 +"minut";
-						}else{
-							maxplaytime+=" minut";
-						}
-						*/
+
 						var playtime = checkMinMax(minplaytime, maxplaytime);
 						
 						var categories = "";
@@ -201,7 +186,7 @@ $("#register").click(function(){
 			});
 		}
 		
-	});
+	});*/
 	/*
 	function UroUriUre(time){
 		if(time == 1){

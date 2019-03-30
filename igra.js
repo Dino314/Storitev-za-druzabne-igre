@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$.ajax({
 				url:'https://api.geekdo.com/xmlapi2/thing?id='+id,
 				dataType:'xml',
-				async:false,
+				async:true,
 				success:function(data){
 					//console.log(data);
 					var name = $(data).find("name").attr("value");
@@ -37,7 +37,7 @@ $(document).ready(function(){
 					
 					var minplaytime = $(data).find("minplaytime").attr("value");
 					var maxplaytime = $(data).find("maxplaytime").attr("value");
-					var playtime = checkMinMax(minplaytime, maxplaytime);
+					var playtime = checkMinMax(minplaytime, maxplaytime)+" minut";
 					
 					var description = $(data).find("description").text();
 					description = description.replace(/&#10;/g, "<br />");

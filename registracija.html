@@ -1,4 +1,4 @@
-<!doctype html>
+		<!doctype html>
 <html lang="en">
 <head>
 <!-- Required meta tags -->
@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
+	crossorigin="anonymous">    <!-- Load Leaflet from CDN-->    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />    <script src="https://unpkg.com/leaflet/dist/leaflet-src.js"></script>    <!-- Load Esri Leaflet from CDN -->    <script src="https://unpkg.com/esri-leaflet"></script>    <!-- Esri Leaflet Geocoder -->    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css">    <script src="https://unpkg.com/esri-leaflet-geocoder"></script>
 <link rel="stylesheet" href="styling.css">
 
 <title>Igrajmo - Registracija</title>
@@ -24,10 +24,8 @@
 				<h1>Registracija</h1>
 				<input type="text" class="form-control"
 					id="usernameInput" placeholder="Uporabniško ime">
-					<input type="email"
-					class="form-control mt-2" id="emailInput" placeholder="E-poštni naslov">
-					<input
-					type="password" class="form-control mt-2" id="passwordInput" placeholder="Geslo">
+
+					<input	type="password" class="form-control mt-2" id="passwordInput" placeholder="Geslo">										<input type="email"	class="form-control mt-2" id="emailInput" placeholder="E-poštni naslov">										<input type="text"	class="form-control mt-2" id="addressInput" placeholder="Hišni naslov">
 				<button id="register" type="submit" class="btn btn-block mt-2">Registriraj</button>
 				<small class="form-text"><a class="text-muted"
 					href="index.html">Ste že registrirani? Kliknite tukaj za
@@ -50,8 +48,7 @@
 	<script
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-			<script src="script.js"></script>
-		
+		crossorigin="anonymous"></script>				<script src="script.js"></script>	
+		<script type="module">			L.esri.Geocoding.geocode().text('Sečovlje 71').run(function(err, results, response){				var latlng = results.results[0].latlng;				console.log(latlng.lat+", "+latlng.lng+", "+results.results[0].text);			});		</script>
 </body>
 </html>

@@ -1,26 +1,25 @@
 <?php
 	require "init.php";
 	session_start();
-	$id_uporabniki = $_SESSION['id_uporabniki'];
-	$akcija = $_GET['akcija'];
 	
-	//$sql_query="select id_druzabnaIgra from SeznamIger where id_uporabniki like '$id_uporabniki';";
-	$sql_query="select id_druzabnaIgra from SeznamIger where id_uporabniki like $id_uporabniki AND $akcija like '1';";
-	$result = mysqli_query($con,$sql_query);
-	//$numOfGames = mysqli_num_rows($result);
-	//$result = mysqli_fetch_all($result);
-	$url = "https://api.geekdo.com/xmlapi2/thing?id=";
+	$query = $_GET['query'];
+	$type = $_GET['type'];
+	$query = str_replace(" ", "+", $query);
+	$url = "https://api.geekdo.com/xmlapi2/search?query=".$query."&type=".$type;
+	$xml=simplexml_load_file($url) or die("Error: Cannot create object");
+	$output = '';
 	//$idArr = array();
 	$i = 0;
-	
-	while($row = mysqli_fetch_array($result)){
-		//print_r($row);
-		//array_push($idArr, $row[0]);
-		$url = $url.$row[0].",";
-	}
-	
+	$boardgame = strpos($type, "boardgame,boardgameexpansion,");
+	foreach($xml->children() as $item){	
+		if (($boardgame !== false && $item["type"] != "boardgameexpansion") || $boardgame === false){
+			$output = $output.$item["id"].",";
+			//array_push($idArr, $item["id"]);
+		}
+	}	//echo $boardgame."<br /><br />";
+
+	$url = "https://api.geekdo.com/xmlapi2/thing?id=".$output."&type=".$type;
 	$xml=simplexml_load_file($url) or die("Error: Cannot create object");
-	unset($url);
 	$output = '[{';
 	
 	foreach($xml->children() as $item){
@@ -87,5 +86,4 @@
 	function timeCheck($time){
 		return $time." minut";
 	}
-
 ?>

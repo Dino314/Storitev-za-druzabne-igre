@@ -28,7 +28,7 @@
 		  <li class="nav-item">
 			<a class="nav-link" id="priljubljene-tab" data-toggle="tab" href="#priljubljene" role="tab" aria-controls="priljubljene" aria-selected="false">
 				<img class="d-sm-none" src="/images/FavB.png" width="60%"></img>
-				<div class="d-none d-sm-block"><img class="" src="/images/FavB.png" width="10%"></img>Priljubljene</div>
+				<div class="d-none d-sm-block"><img class="" src="/images/FavB.png" width="10%"></img>Všečkane</div>
 			</a>
 		  </li>
 		  <li class="nav-item">
@@ -50,28 +50,30 @@
 				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=moja" data-sort-name="name">
 				  <thead>
 				    <tr>
-				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
+				      <th data-field="image" data-formatter="imageFormatter">Slika</th>
 				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
-				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
-				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
-				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
-				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				      <th data-field="category" class="d-none d-lg-table-cell text-left text-nowrap">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-lg-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Čas igranja</th>
+				      <th data-field="podatki" class="d-none d-sm-table-cell d-lg-none text-left text-nowrap">Podatki</th>
 				    </tr>
 				  </thead>
 				</table>
 				
 			</div>
 			<div class="tab-pane" id="priljubljene" role="tabpanel" aria-labelledby="priljubljene-tab">
-				<div class="d-sm-none">Priljubljene</div>
+				<div class="d-sm-none">Všečkane</div>
 				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=priljubljena" data-sort-name="name">
 				  <thead>
 				    <tr>
 				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
 				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
-				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
-				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
-				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
-				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				      <th data-field="category" class="d-none d-lg-table-cell text-left text-nowrap">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-lg-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Čas igranja</th>
+				      <th data-field="podatki" class="d-none d-sm-table-cell d-lg-none text-left text-nowrap">Podatki</th>
 				    </tr>
 				  </thead>
 				</table>
@@ -82,12 +84,13 @@
 				<table id="table" class="table-striped" data-toggle="table" data-sortable="true" data-url="naloziIgre.php?akcija=zazeljena" data-sort-name="name">
 				  <thead>
 				    <tr>
-				      <th data-field="image" data-formatter="imageFormatter">Slika</th>
+				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
 				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
-				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
-				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
-				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
-				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				      <th data-field="category" class="d-none d-lg-table-cell text-left text-nowrap">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-lg-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Čas igranja</th>
+				      <th data-field="podatki" class="d-none d-sm-table-cell d-lg-none text-left text-nowrap">Podatki</th>
 				    </tr>
 				  </thead>
 				</table>
@@ -100,10 +103,11 @@
 				    <tr>
 				      <th data-field="image" data-data-type="image" data-formatter="imageFormatter">Slika</th>
 				      <th data-field="name" data-sortable="true" data-formatter="linkFormatter">Ime igre</th>
-				      <th data-field="category" class="d-none d-sm-table-cell">Kategorije</th>
-				      <th data-field="yearpublished" data-sortable="true" class="d-none d-sm-table-cell">Leto izdaje</th>
-				      <th data-field="players" data-sortable="true" class="d-none d-sm-table-cell">Število igralcev</th>
-				      <th data-field="playtime" data-sortable="true" class="d-none d-sm-table-cell">Čas igranja</th>
+				      <th data-field="category" class="d-none d-lg-table-cell text-left text-nowrap">Kategorije</th>
+				      <th data-field="yearpublished" data-sortable="true" class="d-none d-lg-table-cell">Leto izdaje</th>
+				      <th data-field="players" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Število igralcev</th>
+				      <th data-field="playtime" data-sortable="true" class="d-none d-lg-table-cell text-nowrap">Čas igranja</th>
+				      <th data-field="podatki" class="d-none d-sm-table-cell d-lg-none text-left text-nowrap">Podatki</th>
 				    </tr>
 				  </thead>
 				</table>
@@ -135,7 +139,7 @@
 	<script>
 		//razbere povezavo do slike ter naredi img
 		function imageFormatter(value){
-			return "<img class=\"img-fluid\" src=\""+value+"\"></img>";
+			return "<img width=\"60%\" class=\"img-fluid\" src=\""+value+"\"></img>";
 			
 		}
 		
